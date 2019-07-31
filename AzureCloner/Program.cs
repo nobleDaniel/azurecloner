@@ -103,7 +103,7 @@ namespace AzureCloner
 
                         startInfo.FileName = "git";
 
-                        startInfo.Arguments = $"clone {devOpsRepo.RemoteUrl.Replace("://", $"://{HttpUtility.UrlEncode(email)}:{password}@")}";
+                        startInfo.Arguments = $"clone {devOpsRepo.RemoteUrl.Replace("://", $"://{HttpUtility.UrlEncode(email)}:{HttpUtility.UrlEncode(password)}@")}";
 
                         process.StartInfo = startInfo;
 
